@@ -10,16 +10,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: Setup NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'pnpm'
           cache-dependency-path: package-lock.json
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
