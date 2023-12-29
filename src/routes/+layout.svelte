@@ -1,7 +1,1 @@
-<script>
-	import "../app.pcss";
-</script>
-
-export const prerender = true;
-
-<slot />
+<script>import "../app.pcss";</script><slot></slot>
